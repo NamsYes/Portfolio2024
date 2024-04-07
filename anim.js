@@ -5,7 +5,7 @@ import './style.css';
   
   ///////////////////////////////////////////////////////////
   const { Application } = await import('@splinetool/runtime');
-  const canvas = document.getElementsByClassName('canvas3d')[0]; // Assuming you've adjusted your HTML or JS as mentioned earlier
+  const canvas = document.getElementsByClassName('switchSpline')[0]; // Assuming you've adjusted your HTML or JS as mentioned earlier
   const canvas2 = document.getElementsByClassName('canvas3d2')[0]; // Assuming you've adjusted your HTML or JS as mentioned earlier
   const canvas3 = document.getElementsByClassName('canvas3d3')[0]; // Assuming you've adjusted your HTML or JS as mentioned earlier
   const SplineHero = document.getElementsByClassName('canvas3dlamp')[0]; // Assuming you've adjusted your HTML or JS as mentioned earlier
@@ -13,9 +13,9 @@ import './style.css';
   const app = new Application(canvas);
   const app2 = new Application(canvas2);
   const app3 = new Application(canvas3);
-  const Lamp = new Application(SplineHero);
+  const lamp = new Application(SplineHero);
 
-  Lamp.load('https://prod.spline.design/Ers8tHqNy1FXlB8N/scene.splinecode').then(() => {
+  lamp.load('https://prod.spline.design/Ers8tHqNy1FXlB8N/scene.splinecode').then(() => {
 
   });
 
@@ -63,7 +63,7 @@ import './style.css';
    var voile = document.getElementById("voile");
    var voile2 = document.getElementById("voile2");
    var hero = document.getElementById("hero");
-   var lamp = document.getElementById("lamp");
+   var Switch = document.getElementById("Switch");
  
  
    bouton.addEventListener("click", function() {
@@ -77,10 +77,13 @@ import './style.css';
      setTimeout(() => {
        falsehero.style.display ="none";
        hero.style.display ="flex";
-       lamp.style.display ="block";
+       voile2.style.display = "none";
+       voile.style.display = "none";
+       Switch.style.display ="flex";
+       
+
  
- 
-   }, 2000); // Ajoutez un délai de 1000 millisecondes (1 seconde)
+   }, 2000);
  
    });
    

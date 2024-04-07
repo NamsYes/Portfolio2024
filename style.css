@@ -114,7 +114,7 @@ h1{
 
 .falseinfos button {
     border: none;
-    width: 250px;
+    width: 300px;
     height: 65px;
     border-radius: 50px;
     font-family: 'Changa';
@@ -236,6 +236,32 @@ h1{
     border-radius: 50px;
 }
 
+
+.hero {
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center; ;
+    margin-bottom: 500px;
+    overflow: hidden; 
+    animation: starting 2s ease-in-out;
+
+}
+
+@keyframes starting {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+
+
 .hero__h2 {
     font-family: "Changa One", sans-serif;
     font-weight: 400;
@@ -243,17 +269,9 @@ h1{
     color: white;
     text-align: center;
     margin-bottom: 0px;
+    transition: cubic-bezier();
 
-}
 
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center; ;
-    margin-bottom: 300px;
-    overflow: hidden; 
 }
 
 
@@ -270,35 +288,43 @@ h1{
 }
 
 
-.lamp{
-    display: flex;
+.Switch{
+    height: 100vh;
+    display: none;
     flex-direction: column;
     align-items: center;
-    max-width: 100%; /* Le composant ne peut pas être plus large que le conteneur */
-    max-height: 100%; /* Le composant ne peut pas être plus haut que le conteneur (si nécessaire) */
+    justify-content:center; 
+    margin-bottom: 500px;
+    overflow: hidden; 
 }
 
-.lamp__img {
+.switch__img {
     width: 80px;
     padding-top: 60px;
     padding-bottom: 0px;
 }
 
+.switchSpline{
+    display: flex;
+    height: 200px;
+    width: 300px;
+}
 
-.lamp__p {
+
+.switch__p {
     color: #ffffff;
     margin-top: 0px;
     font-size: 30px;
 }
 
-.lamp__pbis{
+.switch__pbis{
     color: #ffffff;
     margin-top: 0px;
     font-size: 50px;
     margin-bottom: 0px;
 }
  
-.lamp__h2 {
+.switch__h2 {
     font-family: "Changa One", sans-serif;
     font-weight: 400;
     font-size: 50px;
@@ -306,7 +332,7 @@ h1{
     text-align: center;
 }
 
-.lamp__pratice{
+.switch__pratice{
     font-family: "Changa One", sans-serif;
     font-weight: 400;
     font-size: 30px;
